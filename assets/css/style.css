@@ -1,7 +1,29 @@
-html {
-    background-color: black;
+:root {
+    --baseitblue: rgb(56,151,200);
+}
+
+#baseitLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+#logoWrapper {
+    border-bottom: 5px solid;
+    border-color: var(--baseitblue);
+    margin-bottom: 10px;
+}
+
+#menuBarList, .menuItem {
+    list-style-type: none;
+    display: inline;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
 }
 
 #menuBar {
-    color: blue;
+    color: var(--baseitblue);
+    text-align: center;
 }
