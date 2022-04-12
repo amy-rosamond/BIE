@@ -46,9 +46,9 @@ html {
     cursor: pointer;
     display: inline-block;
     justify-content: center;
-    margin-left: 20px;
+    margin-left: 5rem;
     border-radius: .25rem;
-    padding: .9rem .9rem;
+    padding: .9rem 3rem;
     font-size: 14px;
     position: relative;
     color: var(--baseitblue);
