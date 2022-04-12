@@ -1,29 +1,93 @@
 :root {
     --baseitblue: rgb(56,151,200);
+    --lightyellow: rgb(255,255,170);
+    --darkdarkblue: rgb(11,31,69);
+    --white: #FFFFFF;
+}
+
+html {
+    background-color: var(--white);
 }
 
 #baseitLogo {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 25%;
+    width: 20%;
+    padding-bottom: 5px;
 }
 
 #logoWrapper {
-    border-bottom: 5px solid;
+    border-bottom: 5px double;
     border-color: var(--baseitblue);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 #menuBarList, .menuItem {
     list-style-type: none;
     display: inline;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     font-size: 1.2em;
+    font-weight: bold;
 }
 
 #menuBar {
     color: var(--baseitblue);
     text-align: center;
+    border-bottom: 5px double;
+    border-color: var(--baseitblue);
+    padding-bottom: 20px;
 }
+
+.menuItem {
+    margin-left: 20px;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    display: inline-block;
+    justify-content: center;
+    margin-left: 20px;
+    border-radius: .25rem;
+    padding: .9rem .9rem;
+    font-size: 14px;
+    position: relative;
+    color: var(--baseitblue);
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.menuItem::before {
+    content: '';
+    background-color: var(--baseitblue);
+    border-radius: .25rem;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 8px;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+.menuItem:hover::before {
+    border-radius: .25rem;
+    bottom: 0;
+    height: 100%;
+}
+
+.menuItem:hover {
+    color: var(--white);
+    transition: all .3s ease-in-out;
+}
+
+/*#contact {
+    color: var(--white);
+    background-color: var(--baseitblue);
+    border-radius: 1.25rem;
+    border-color: var(--baseitblue);
+}*/
+
+/*.menuItem:hover {
+    box-shadow: 0 0 10px 5px var(--lightyellow);
+
+}*/
