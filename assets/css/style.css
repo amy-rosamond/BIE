@@ -6,7 +6,7 @@
 }
 
 html {
-    background-color: var(--white);
+    background-color: var(--darkdarkblue);
 }
 
 #baseitLogo {
@@ -18,9 +18,10 @@ html {
 }
 
 #logoWrapper {
-    border-bottom: 5px double;
+    border: 3px solid;
     border-color: var(--baseitblue);
     margin-bottom: 20px;
+    background-color: var(--white);
 }
 
 #menuBarList, .menuItem {
@@ -51,9 +52,11 @@ html {
     padding: .9rem 3rem;
     font-size: 14px;
     position: relative;
-    color: var(--baseitblue);
+    color: var(--white);
     font-size: 20px;
     letter-spacing: 2px;
+    text-shadow: 0 0 6px #000, 0 0 6px #000;
+    
 }
 
 .menuItem::before {
