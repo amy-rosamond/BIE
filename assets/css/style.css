@@ -50,9 +50,7 @@ html {
     margin-left: 5rem;
     border-radius: .25rem;
     padding: .9rem 3rem;
-    font-size: 14px;
     position: relative;
-    color: var(--white);
     font-size: 20px;
     letter-spacing: 2px;
     text-shadow: 0 0 6px #000, 0 0 6px #000;
@@ -137,10 +135,11 @@ html {
 
     #miniBarList, .miniItem {
         list-style-type: none;
-        display: inline-block;
+        display: flex;
         text-align: center;
         font-size: 1em;
         font-weight: bold;
+        flex-direction: column;
     }
     
       #miniMenu {
@@ -152,6 +151,9 @@ html {
         border: 5px double;
         border-color: var(--baseitblue);
         padding-bottom: 5px;
+        max-width: max-content;
+        margin-left: auto;
+        margin-right: auto; 
       }
 }
 
