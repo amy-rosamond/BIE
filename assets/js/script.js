@@ -1,9 +1,16 @@
-$('nav div').click(function(){
-    $($branding).css("display", "none");
-    $(this).addClass('active');
+$('#toggleMenu').on('click', function () {
+    $('#menuBar').slideToggle()
 });
 
-$('nav div.active').click(function(){
-    $($branding).css("display", "block");
-    $(this).removeClass();
+function resize() {
+    if (window.innerWidth > 800) {
+        $('#menuBar').show()
+    } else {
+        $('#menuBar').hide()
+    }
+}
+
+$(function () {
+    resize();
+    $(window).resize(resize)
 });
