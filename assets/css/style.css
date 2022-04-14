@@ -3,6 +3,7 @@
     --lightyellow: rgb(255, 255, 170);
     --darkdarkblue: rgb(11, 31, 69);
     --white: #FFFFFF;
+    --black: #000;
 }
 
 html {
@@ -11,30 +12,30 @@ html {
 
 #baseitLogo {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     width: 20%;
     padding-bottom: 5px;
 }
 
 #logoWrapper {
-    border: 3px solid;
-    border-color: var(--baseitblue);
+    border: 3px solid var(--baseitblue);
     margin-bottom: 20px;
     background-color: var(--white);
 }
 
 .menuItem {
-    margin-left: 20px;
     border-radius: 1.25rem;
     cursor: pointer;
     display: inline-block;
     justify-content: center;
     margin-left: 5rem;
-    border-radius: .25rem;
     padding: .9rem 3rem;
     position: relative;
     text-shadow: 0 0 6px #000, 0 0 6px #000;
+}
+
+#menuBarList {
+    padding: 10px;
 }
 
 #menuBarList,
@@ -42,7 +43,6 @@ html {
     list-style-type: none;
     display: inline;
     text-align: center;
-    padding: 10px;
     font-size: 1.2em;
     font-weight: bold;
 }
@@ -50,8 +50,7 @@ html {
 #menuBar {
     color: var(--baseitblue);
     text-align: center;
-    border-bottom: 5px double;
-    border-color: var(--baseitblue);
+    border-bottom: 5px double var(--baseitblue);
     padding-bottom: 20px;
 }
 
@@ -87,28 +86,27 @@ html {
     text-decoration: none;
 }
 
-
-
 #contactUs {
     color: var(--white);
     text-align: center;
     text-align: underline;
-    
+    text-shadow: 0 0 6px #000, 0 0 6px #000;
+    text-decoration: 1px underline var(--baseitblue) double;
 }
 
 #contactForm {
-    max-width: 800px;
-    border: 5px solid;
-    border-color: var(--baseitblue);
+    max-width: 1000px;
+    border: 5px solid var(--baseitblue);
     border-radius: 1.25rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+    margin: 50px auto 0;
     background-color: rgba(56, 151, 200, 0.5);
 }
 
 #form {
     padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    float: right;
 }
 
 .formFields {
@@ -118,10 +116,19 @@ html {
     font-weight: bold;
     margin: 0 auto;
     padding: 10px 20px;
-    border: 3px solid;
+    border: 3px solid var(--baseitblue);
     border-radius: 1.25rem;
-    color: var(--baseitblue);
-    border-color: var(--baseitblue);
+    color: var(--black);
+}
+
+.contactInfo {
+    border: 2px solid var(--baseitblue);
+    max-width: fit-content;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 10px 5px var(--darkdarkblue);
+    margin: 20px;
+    padding: 10px 30px;
+    
 }
 
 @media only screen and (min-width: 800px) {
@@ -147,8 +154,7 @@ html {
 
     #baseitLogo {
         display: block;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
         width: 20%;
         padding-bottom: 5px;
         min-width: 300px;
@@ -219,7 +225,7 @@ html {
         color: #fff;
         background: none;
         /*border: 5px double;*/
-        border-color: var(--baseitblue);
+        border-color: var(--black);
         padding-bottom: 5px;
         max-width: max-content;
         margin-left: auto;
