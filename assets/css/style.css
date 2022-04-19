@@ -1,13 +1,13 @@
 :root {
-    --baseitblue: rgb(56, 151, 200);
-    --lightyellow: rgb(255, 255, 170);
-    --darkdarkblue: rgb(11, 31, 69);
-    --white: #FFFFFF;
-    --black: #000;
+    --baseitblue: rgb(56,151,200);
+    --lightyellow: rgb(255,255,170);
+    --darkestblue: rgb(11,31,69);
+    --white: rgb(255,255,255);
+    --black: rgb(0,0,0);
 }
 
 html {
-    background-color: var(--darkdarkblue);
+    background-color: var(--darkestblue);
 }
 
 #baseitLogo {
@@ -89,9 +89,9 @@ html {
 #contactUs {
     color: var(--white);
     text-align: center;
-    text-align: underline;
     text-shadow: 0 0 6px #000, 0 0 6px #000;
     text-decoration: 1px underline var(--baseitblue) double;
+    
 }
 
 #contactForm {
@@ -102,11 +102,12 @@ html {
     background-color: rgba(56, 151, 200, 0.5);
 }
 
-#form {
+.form {
     padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     float: right;
+    width: 600px;
 }
 
 .formFields {
@@ -114,22 +115,53 @@ html {
     text-align: center;
     font-size: 1em;
     font-weight: bold;
-    margin: 0 auto;
+    margin: 10px 20px;
     padding: 10px 20px;
     border: 3px solid var(--baseitblue);
-    border-radius: 1.25rem;
-    color: var(--black);
+    border-radius: 0.8rem;
+    float: right;
+    background-color: rgba(56,151,200,0.2);
+    color: var(--white);
+    box-shadow: 0 0 12px 5px rgba(56,151,200,0.5);
+    max-width: 450px;
+    width: 100%;
 }
 
 .contactInfo {
     border: 2px solid var(--baseitblue);
     max-width: fit-content;
     border-radius: 1.25rem;
-    box-shadow: 0 0 10px 5px var(--darkdarkblue);
+    box-shadow: 0 0 5px 5px rgba(56,151,200,0.4);
     margin: 20px;
     padding: 10px 30px;
-    
+    float: left;
+    color: var(--white);
 }
+
+.emailUs {
+    color: var(--white);
+}
+
+::placeholder {
+    font-size: 12px;
+    font-family: sans-serif;
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (min-width: 800px) {
     #toggleMenu {
@@ -194,7 +226,7 @@ html {
         border-radius: .25rem;
         border: 3px double;
         border-color: var(--baseitblue);
-        background-color: var(--darkdarkblue);
+        background-color: var(--darkestblue);
         padding: .3rem 1.5rem;
         font-size: 1rem;
         position: relative;
@@ -243,7 +275,7 @@ html {
         border-radius: .25rem;
         border: 3px double;
         border-color: var(--baseitblue);
-        background-color: var(--darkdarkblue);
+        background-color: var(--darkestblue);
         padding: .3rem 1.5rem;
         font-size: 1rem;
         position: relative;
@@ -254,15 +286,3 @@ html {
         width: 18rem;
     }
 }
-
-/*#contact {
-    color: var(--white);
-    background-color: var(--baseitblue);
-    border-radius: 1.25rem;
-    border-color: var(--baseitblue);
-}*/
-
-/*.menuItem:hover {
-    box-shadow: 0 0 10px 5px var(--lightyellow);
-
-}*/
