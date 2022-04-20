@@ -91,6 +91,11 @@ html {
     text-decoration: none;
 }
 
+.contactBody {
+    display: flex;
+    right: 1.2rem;
+}
+
 #contactUs {
     color: var(--white);
     text-align: center;
@@ -129,7 +134,7 @@ html {
     font-size: 1em;
     font-weight: bold;
     margin: 10px auto;
-    padding: 10px 20px;
+    padding: 15.5px 20px;
     border: 3px solid var(--baseitblue);
     border-radius: 0.8rem;
     float: right;
@@ -157,14 +162,15 @@ html {
     color: white;
     flex-direction: column;
     border-radius: 1.25rem;
-    margin: 30px;}
+    margin: 17px;
+}
 
 .contactInfo {
     border: 2px solid var(--baseitblue);
     max-width: fit-content;
     border-radius: 1.25rem;
     box-shadow: 0 0 5px 5px rgba(56,151,200,0.4);
-    padding: 3.5rem 2.5rem;    
+    padding: 3.5rem 3rem;    
     color: var(--white);
     text-align: center;
     background-color: rgba(56,151,200,0.1);
@@ -184,14 +190,26 @@ html {
     font-size: 1.25rem;
 }
 
+.socialMediaTable {
+    display: flex;
+    justify-content: center;
+}
+
 
 #baseitEmail {
     text-decoration: underline;
     text-decoration-color: var(--baseitblue);
+    font-size: 1.7rem;
+}
+
+#baseitPhone {
+    text-decoration: underline;
+    text-decoration-color: var(--baseitblue);
+    font-size: 1.7rem;
 }
 
 ::placeholder {
-    font-size: 14px;
+    font-size: 1.2rem;
     font-family: sans-serif;
     opacity: 0.8;
 }
