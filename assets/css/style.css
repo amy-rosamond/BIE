@@ -9,12 +9,17 @@
     --black: rgb(0, 0, 0);
     --fontfamily-BIZ: 'BIZ UDPMincho', serif;
     --blue-shadow: 0 0 12px 5px rgba(56, 151, 200, 0.5);
-    --black-shadow: 0 0 6px #000, 0 0 6px #000;
+    --black-shadow: 0 0 6px #000;
+    ---larger-shadow-black: 00 0 18px #000;
 }
 
 html {
     background-color: var(--darkestblue);
     font-family: var(--fontfamily-BIZ);
+}
+
+body {
+    margin: 0;
 }
 
 #baseitLogo {
@@ -29,40 +34,6 @@ html {
     background-color: var(--white);
 }
 
-/* .menuItem {
-    border-radius: 1.25rem;
-    cursor: pointer;
-    display: inline-block;
-    justify-content: center;
-    margin-left: 4rem;
-    padding: .9rem 3rem;
-    position: relative;
-    text-shadow: 0 0 6px #000, 0 0 6px #000;
-    font-family: var(--fontfamily-BIZ);
-    font-size: 1.2rem;
-}
-
-#menuBarList {
-    padding: 10px;
-}
-
-#menuBarList,
-.menuItem {
-    list-style-type: none;
-    display: inline;
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-#menuBar {
-    color: var(--baseitblue);
-    text-align: center;
-    border-bottom: 5px double var(--baseitblue);
-    font: var(--fontfamily-BIZ);
-    display: flex;
-    justify-content: center;
-} */
 .menuItem {
     border-radius: 1.25rem;
     cursor: pointer;
@@ -292,6 +263,80 @@ html {
     padding: 4rem 2rem;
 }
 
+/*        SERVICES PAGE        */
+
+.services,
+.services-about,
+.services-content-wrapper {
+    color: var(--white);
+    font-weight: normal;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 1rem;
+    max-width: 200px;
+    width: 100%;
+    margin: 1rem auto;
+    background: linear-gradient(to right, var(--darkestblue), var(--darkestblue)) padding-box,
+        linear-gradient(to right, var(--baseitblue), var(--white), var(--baseitblue)) border-box;
+    border: 4px solid transparent;
+    border-radius: 1.5rem;
+    box-shadow: var(---larger-shadow-black);
+}
+
+.services-content-wrapper {
+    margin: 1rem auto;
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#baseitElectrical {
+    color: var(--baseitblue);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.gradient-line {
+    background: linear-gradient(to left, rgb(42, 239, 229), transparent 90%);
+    height: 2px;
+    width: 100%;
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 1rem 0;
+
+}
+
+#installationPhotoWrapper {
+    max-width: 800px;
+    width: 100%;
+}
+
+#installationPhoto {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    /* margin: 2rem 4rem; */
+}
+
+.installation-wrapper {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* position: relative;
+    left: 100px;
+    margin: 2rem; */
+}
+
+
+.installation-work {
+    color: var(--white);
+}
 
 
 
@@ -364,11 +409,6 @@ html {
 /*        MINI MENU DROPDOWN        */
 
 @media only screen and (max-width: 800px) {
-
-    /* #logoWrapper,
-    #baseitLogo {
-        max-height: 100px
-    } */
 
     html {
         padding: 10px;
@@ -448,7 +488,7 @@ html {
             clear: left;
             justify-content: center;
         }
-    
+
         #menuBarList,
         .menuItem {
             display: flex;
@@ -464,7 +504,43 @@ html {
         }
     }
 
+    @media only screen and (max-width: 390px) {
+
+        .toggle-menu,
+        .menuItem {
+            width: 100%;
+        }
+
+        .menuItem {
+            color: white;
+            width: 10rem;
+        }
+
+        #header {
+            color: white;
+
+        }
+
+        #menuBarList {
+            display: flex;
+            width: 300px;
+        }
+
+        .menuBar {
+            color: white;
+
+        }
+
+        .menu-links {
+            justify-content: center;
+            display: flex;
+        }
+    }
+
+
     /*        CONTACT PAGE        */
+
+
 
     #contactUs {
         font-size: 1rem;
@@ -485,7 +561,7 @@ html {
         position: relative;
         margin-top: 20px;
         width: 100%;
-        margin: 0 auto;
+        margin: 0 auto 80px;
     }
 
     .form {
@@ -534,35 +610,5 @@ html {
 
     .socialMediaTag {
         font-size: 1.2rem;
-    }
-
-    .toggle-menu,
-    .menuItem {
-        width: 100%;
-    }
-
-    .menuItem {
-        color: white;
-        width: 10rem;
-    }
-
-    #header {
-        color: white;
-
-    }
-
-    #menuBarList {
-        display: flex;
-        width: 300px;
-    }
-
-    .menuBar {
-        color: white;
-
-    }
-
-    .menu-links {
-        justify-content: center;
-        display: flex;
     }
 }
