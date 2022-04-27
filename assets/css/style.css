@@ -8,9 +8,10 @@
     --white: rgb(255, 255, 255);
     --black: rgb(0, 0, 0);
     --fontfamily-BIZ: 'BIZ UDPMincho', serif;
-    --blue-shadow: 0 0 12px 5px rgba(56, 151, 200, 0.5);
+    --blue-shadow: 0 0 12px 5px rgba(56, 151, 200, 0.8);
     --black-shadow: 0 0 6px #000;
-    ---larger-shadow-black: 00 0 18px #000;
+    --larger-shadow-black: 00 0 18px #000;
+    --text-shadow: 2px 2px 4px #000000;
 }
 
 html {
@@ -32,6 +33,9 @@ body {
 #logoWrapper {
     border: 3px solid var(--baseitblue);
     background-color: var(--white);
+    margin: 0 100px;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
 .menuItem {
@@ -45,7 +49,6 @@ body {
     position: relative;
     text-shadow: 0 0 6px #000, 0 0 6px #000;
     font-family: var(--fontfamily-BIZ);
-    font-size: 1.2rem;
 }
 
 #menuBarList {
@@ -263,7 +266,14 @@ body {
     padding: 4rem 2rem;
 }
 
+
+
+
+
 /*        SERVICES PAGE        */
+
+
+
 
 .services,
 .services-about,
@@ -284,7 +294,11 @@ body {
         linear-gradient(to right, var(--baseitblue), var(--white), var(--baseitblue)) border-box;
     border: 4px solid transparent;
     border-radius: 1.5rem;
-    box-shadow: var(---larger-shadow-black);
+    box-shadow: var(--larger-shadow-black);
+}
+
+.services-about {
+    text-align: center;
 }
 
 .services-content-wrapper {
@@ -301,7 +315,7 @@ body {
 }
 
 .gradient-line {
-    background: linear-gradient(to left, rgb(42, 239, 229), transparent 90%);
+    background: linear-gradient(to left, var(--white), var(--baseitblue), var(--white));
     height: 2px;
     width: 100%;
     display: block;
@@ -311,16 +325,22 @@ body {
 
 }
 
+#gradientDisplayHide {
+    display: none;
+}
+
 #installationPhotoWrapper {
     max-width: 800px;
     width: 100%;
+    margin-left: 4rem;
 }
 
 #installationPhoto {
     max-width: 800px;
     width: 100%;
     display: flex;
-    /* margin: 2rem 4rem; */
+    border-radius: 2rem;
+    box-shadow: var(--black-shadow);
 }
 
 .installation-wrapper {
@@ -328,15 +348,62 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* position: relative;
-    left: 100px;
-    margin: 2rem; */
+    position: relative;
+    right: 4rem;
 }
 
 
 .installation-work {
-    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline 1.5px;
+    text-decoration-color: var(--baseitblue);
+    text-shadow: 5px 5px 9px #000;
+    font-weight: bold;
+    font-size: 1.6rem;
 }
+
+.installation-description {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: -0.1rem 2rem;
+}
+
+.installation-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.installation-item-text {
+    margin: auto;
+}
+
+.installation-item {
+    margin: 1.2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: var(--blue-shadow);
+    transition: all .2s ease-in-out;
+}
+
+.installation-item:hover {
+    box-shadow: 0 0 12px 5px rgba(56, 151, 200, 1);
+    border: 0.5px solid var(--baseitblue);
+}
+
+.installation-item-more-info:hover {
+    cursor: pointer;
+}
+
+.installation-item-more-info::after {
+    cursor: pointer;
+}
+
+
 
 
 
@@ -417,7 +484,7 @@ body {
     .toggle-menu {
         display: flex;
         justify-content: center;
-        border-radius: 1.25rem;
+        border-radius: 0.6rem;
         cursor: pointer;
         border: 3px double;
         border-color: var(--baseitblue);
@@ -451,7 +518,6 @@ body {
         border-radius: .5rem;
         color: #fff;
         background: none;
-        /*border: 5px double;*/
         border-color: var(--black);
         padding-bottom: 5px;
         max-width: max-content;
@@ -465,9 +531,8 @@ body {
         float: left;
         clear: left;
         justify-content: center;
-        border-radius: 1.25rem;
+        border-radius: 0.6rem;
         cursor: pointer;
-        border-radius: .25rem;
         border: 3px double;
         border-color: var(--baseitblue);
         background-color: var(--darkestblue);
@@ -610,5 +675,162 @@ body {
 
     .socialMediaTag {
         font-size: 1.2rem;
+    }
+}
+
+
+
+
+
+
+
+/*        SERVICES PAGE         */
+
+@media only screen and (max-width: 1775px) {
+    .installation-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .installation-wrapper {
+        right: 0;
+        max-width: 800px;
+        width: 100%;
+        margin-bottom: -30px;
+    }
+
+    .installation-item {
+        margin: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1700px) {
+    .installation-wrapper {
+        right: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1670px) {
+    #installationPhotoWrapper {
+        margin-left: 2rem;
+    }
+}
+
+@media only screen and (max-width: 1610px) {
+    #installationPhotoWrapper {
+        margin-left: 2rem;
+        max-width: 750px;
+    }
+
+    .installation-wrapper {
+        right: 0;
+        max-width: 700px;
+        left: 3rem;
+    }
+
+    .installation-item {
+        margin: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 1520px) {
+    .installation-wrapper {
+        left: 1rem;
+        max-width: 650px;
+        margin-right: 400px;
+    }
+
+    .installation-item {
+        margin: 0.6rem;
+        box-shadow: 0 0 8px 4px rgba(56, 151, 200, 0.8);
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .services-content-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #installationPhotoWrapper,
+    .installation-wrapper,
+    .inspection-wrapper {
+        display: grid;
+        grid-column: 1 / 5;
+        grid-column-end: span 2;
+        margin: 0 auto;
+    }
+
+    #installationPhotoWrapper {
+        grid-row-start: 2;
+        margin-top: 2rem;
+    }
+
+    #gradientDisplayHide {
+        display: grid;
+        grid-row-start: 2;
+    }
+
+    .installation-wrapper {
+        max-width: 2000px;
+        position: relative;
+        left: 0;
+    }
+
+    .installation-list {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .installation-item {
+        margin: 2rem 2rem 1rem 2rem;
+        width: 200px;
+    }
+
+    .services-about {
+        margin: auto 2rem;
+    }
+}
+
+@media only screen and (max-width: 1355px) {
+    .services-about {
+        font-size: 1.3rem;
+    }
+
+    .services {
+        font-size: 1.6rem;
+    }
+
+    .installation-list {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1035px) {
+    .installation-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 615px) {
+    .installation-item {
+        width: 150px;
+        margin-bottom: 0.5rem;
+    }
+
+    .installation-work {
+        font-size: 1.4rem;
+    }
+
+    .services-about {
+        font-size: 1.1rem;
+        padding: 0.4rem;
+    }
+}
+
+@media only screen and (max-width: 515px) {
+    .installation-item {
+        width: 133px;
     }
 }
