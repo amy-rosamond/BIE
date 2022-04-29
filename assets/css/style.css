@@ -3,8 +3,10 @@
 :root {
     --baseitblue: rgb(56, 151, 200);
     --baseitbackground: rgba(56, 151, 200, 0.1);
-    --lightyellow: rgb(255, 255, 170);
+    --yellow: rgb(251, 251, 114);
+    --lightyellow: rgb(244, 244, 158);
     --darkestblue: rgb(11, 31, 69);
+    --darkblue: rgb(0, 57, 162);
     --white: rgb(255, 255, 255);
     --black: rgb(0, 0, 0);
     --fontfamily-BIZ: 'BIZ UDPMincho', serif;
@@ -24,18 +26,23 @@ body {
 }
 
 #baseitLogo {
-    display: block;
+    /* display: block;
     margin: 0 auto;
     width: 20%;
+    padding-bottom: 5px; */
+    display: flex;
+    margin: 0 auto;
+    width: min(100% - 4rem, 350px);
     padding-bottom: 5px;
 }
 
 #logoWrapper {
     border: 3px solid var(--baseitblue);
     background-color: var(--white);
-    margin: 0 100px;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+    width: 95%;
+    margin-inline: auto;
 }
 
 .menuItem {
@@ -227,7 +234,7 @@ body {
 #baseitPhone {
     text-decoration: underline;
     text-decoration-color: var(--baseitblue);
-    font-size: 1.7rem;
+    font-size: 1.6rem;
 }
 
 ::placeholder {
@@ -248,6 +255,55 @@ body {
     justify-content: center;
     margin-top: 1.1rem;
     width: 100%;
+}
+
+
+/*        FOOTER        */
+#footer {
+    color: var(--white);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 5px double var(--baseitblue);
+    box-shadow: 0 0 12px 10px var(--baseitblue);
+    height: 310px;
+    margin-top: 50px;
+}
+
+.opening-hours {
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    justify-content: center;
+}
+
+#openingHoursTitle {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    color: var(--baseitblue);
+    background: linear-gradient(to right, var(--darkestblue), var(--darkestblue)) padding-box,
+        linear-gradient(to right, var(--baseitblue), transparent) border-box;
+    border-bottom: 3px solid transparent;
+    max-width: 220px;
+    margin: 0 auto;
+    padding: 0 6px;
+}
+
+#openingHoursList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 190px;
+    justify-content: center;
+    padding: 0 1rem 1rem 1rem;
+    margin: 10px auto 0 auto;
+    max-width: 500px;
+}
+
+.opening-hours-date,
+.opening-hours-time {
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
 }
 
 
@@ -286,19 +342,20 @@ body {
     display: flex;
     justify-content: center;
     text-transform: uppercase;
-    padding: 1rem;
-    max-width: 200px;
+    padding: .5rem 0;
+    max-width: 350px;
     width: 100%;
-    margin: 1rem auto;
+    margin: 2rem auto 1rem;
+    border: 5px solid transparent;
     background: linear-gradient(to right, var(--darkestblue), var(--darkestblue)) padding-box,
-        linear-gradient(to right, var(--baseitblue), var(--white), var(--baseitblue)) border-box;
-    border: 4px solid transparent;
-    border-radius: 1.5rem;
+        linear-gradient(to right, var(--baseitblue), var(--darkestblue), var(--baseitblue)) border-box;
+    border-radius: 1rem;
     box-shadow: var(--larger-shadow-black);
 }
 
 .services-about {
     text-align: center;
+    font-size: 1.4rem;
 }
 
 .services-content-wrapper {
@@ -335,7 +392,7 @@ body {
     margin-left: 4rem;
 }
 
-#installationPhoto {
+.servicesPhotos {
     max-width: 800px;
     width: 100%;
     display: flex;
@@ -391,16 +448,60 @@ body {
 }
 
 .installation-item:hover {
-    box-shadow: 0 0 12px 5px rgba(56, 151, 200, 1);
-    border: 0.5px solid var(--baseitblue);
+    box-shadow: 0 0 12px 5px var(--lightyellow);
+    border: 0.5px solid var(--lightyellow);
 }
 
 .installation-item-more-info:hover {
     cursor: pointer;
+    position: relative;
+    display: flex;
 }
 
-.installation-item-more-info::after {
-    cursor: pointer;
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 300ms ease;
+}
+
+.inspection-wrapper {
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#inspectionPhotoWrapper {
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    left: 5rem;
+}
+
+#inpectionDescription span {
+    color: var(--baseitblue);
+    font-size: 1.5rem;
+}
+
+.inspection-and-testing {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    text-shadow: 5px 5px 9px #000;
+    text-decoration: underline 2px var(--baseitblue);
+}
+
+#EICR {
+    font-size: 1.8rem;
+    color: var(--white);
+    text-shadow: var(--text-shadow);
+}
+
+#EICR span {
+    color: var(--baseitblue);
+}
+
+#inspectionDescription {
+    color: white;
 }
 
 
@@ -459,13 +560,13 @@ body {
         padding: .8rem 1.5rem;
     }
 
-    #baseitLogo {
+    /* #baseitLogo {
         display: flex;
         margin: 0 auto;
         width: 20%;
         padding-bottom: 5px;
         min-width: 300px;
-    }
+    } */
 }
 
 
