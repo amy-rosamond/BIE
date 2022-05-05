@@ -235,6 +235,7 @@ body {
 
 .socialMediaTag {
     font-size: 1.25rem;
+    width: 200px;
 }
 
 .social-media-table {
@@ -532,6 +533,7 @@ body {
     text-align: center;
     font-size: 1.2rem;
     margin: -0.1rem 2rem;
+    margin-bottom: 1rem;
 }
 
 .installation-list {
@@ -545,7 +547,7 @@ body {
 
 .installation-item {
     margin: 1.2rem;
-    display: flex;
+    display: grid;
     justify-content: center;
     text-align: center;
     border: 1px solid transparent;
@@ -562,13 +564,12 @@ body {
 
 .installation-item-more-info:hover {
     cursor: pointer;
-    position: relative;
-    display: flex;
+    display: grid;
 }
 
 .dropdown-content {
     max-height: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     transition: all 300ms ease;
 }
 
@@ -869,6 +870,18 @@ body {
 
 }
 
+@media only screen and (max-width: 620px) {
+    .contact-info-wrapper {
+        display: flex;
+    }
+
+    .contact-info {
+        display: flex;
+        margin: 0 auto;
+        max-width: 285px;
+    }
+}
+
 @media only screen and (max-width: 520px) {
     .formFields {
         max-width: 325px;
@@ -964,6 +977,13 @@ body {
     }
 }
 
+@media only screen and (max-width: 1500px) {
+    .installation-list {
+        position: relative;
+        left: 20px;
+    }
+}
+
 @media only screen and (max-width: 1400px) {
     .services-content-wrapper {
         grid-template-columns: repeat(1, 1fr);
@@ -998,10 +1018,11 @@ body {
         grid-template-columns: repeat(4, 1fr);
         padding: 0;
         margin: 0 auto;
+        position: unset;
     }
 
     .installation-item {
-        margin: 2rem 2rem 1rem 2rem;
+        margin: 1rem 2rem 0.5rem 2rem;
         width: 200px;
     }
 
