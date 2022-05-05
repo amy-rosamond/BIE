@@ -1,16 +1,19 @@
-$('#toggleMenu').on('click', function () {
-    $('#menuBar').slideToggle()
-});
+const accordionBtns = document.querySelectorAll(".installation-item-more-info");
 
-function resize() {
-    if (window.innerWidth > 800) {
-        $('#menuBar').show()
+accordionBtns.forEach((accordion) => {
+  accordion.onclick = function () {
+    this.classList.toggle("active");
+
+    let content = this.nextElementSibling;
+    console.log(content);
+
+    if (content.style.maxHeight) {
+      //this is if the accordion is open
+      content.style.maxHeight = null;
     } else {
-        $('#menuBar').hide()
+      //if the accordion is currently closed
+      content.style.maxHeight = content.scrollHeight + "px";
+      console.log(content.style.maxHeight);
     }
-}
-
-$(function () {
-    resize();
-    $(window).resize(resize)
+  };
 });
